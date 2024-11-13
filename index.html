@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Ray.Co</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div id="cart-icon" aria-label="Carrito de compras">🛒</div>
+    </header>
+    <main>
+        <section class="hero">
+            <video class="background-video" autoplay loop muted playsinline>
+                <source src="Videos/WhatsApp Video 2024-11-12 at 8.53.11 PM.mp4" type="video/mp4">
+            </video><br><br>
+            <h1>Ray.Co</h1>
+            <p>Descubre los mejores productos exclusivos de la zona</p>
+        </section>
+
+        <section class="titulo1">
+            <h2>Gomitas Frutales</h2>
+            <p>500mg de flor, 1000mg de flor</p>
+            <h2>Presentaciones</h2>
+        </section>
+
+        <section>
+            
+        </section>
+
+        <section id="productos" class="products">
+            
+            <div class="product">
+                <img src="https://cdn.pixabay.com/photo/2013/03/15/09/13/candies-93988_1280.jpg" alt="Gomita 1">
+                <div class="product-info">
+                    <h3>Frutos Rojos</h3>
+                    <h3>500mg</h3>
+                    <p>$ 12.0000</p>
+                    <p id="agotado">Agotado</p>
+                    <button class="boton" onclick="openPurchaseForm('Frutos Rojos', 12000)">Comprar</button>
+                    <button class="boton" onclick="addToCart('Producto 1', 12.000)">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="https://cdn.pixabay.com/photo/2024/04/19/17/39/ai-generated-8706896_1280.png" alt="Gomita 2">
+                <div class="product-info">
+                    <h3>Uva</h3>
+                    <h3>500mg</h3>
+                    <p>$ 12.0000</p>
+                    <p id="agotado">Agotado</p>
+                    <button class="boton" onclick="openPurchaseForm('Sandia', 12000)">Comprar</button>
+                    <button class="boton" onclick="addToCart('Producto 1', 12.000)">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="https://cdn.pixabay.com/photo/2016/08/24/21/33/gummybears-1618073_640.jpg" alt="gomita 3">
+                <div class="product-info">
+                    <h3>Naranja</h3>
+                    <h3>500mg</h3>
+                    <p>$ 12.0000</p>
+                    <p id="agotado">Agotado</p>
+                    <button class="boton" onclick="openPurchaseForm('Naranja', 12000)">Comprar</button>
+                    <button class="boton" onclick="addToCart('Producto 1', 12.000)">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://cdn.pixabay.com/photo/2016/08/24/21/33/gummybears-1618073_640.jpg" alt="gomita 3">
+                <div id="product2" class="product-info">
+                    <h3>Mango</h3>
+                    <h3>500mg</h3>
+                    <p>$ 12.0000</p>
+                    <p id="agotado">Agotado</p>
+                    <button class="boton" onclick="openPurchaseForm('Naranja', 12000)">Comprar</button>
+                    <button class="boton" onclick="addToCart('Producto 1', 12.000)">Agregar al carrito</button>
+                </div>
+
+            
+        </section>
+
+        
+    </main>
+
+    <div id="cart">
+        <h2>Carrito de Compras</h2>
+        <button id="close-cart" aria-label="Cerrar carrito">✕</button>
+        <div id="cart-items"></div>
+        <div id="cart-total">Total: $0.00</div>
+        <button id="checkout-btn">Realizar Compra</button>
+    </div>
+
+    <div id="overlay"></div>
+
+    <div id="purchase-form">
+        <h2>Formulario de Compra</h2>
+        <form id="buy-form">
+            <input type="hidden" id="product-name" name="product-name">
+            <input type="hidden" id="product-price" name="product-price">
+            <label for="quantity">Cantidad:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="address">Dirección:</label>
+            <input type="text" id="address" name="address" required>
+            <button type="submit">Confirmar Compra</button>
+            <button class="boton" onclick="addToCart('Producto 1', 12.000)">Agregar al carrito</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ray.Co. Todos los derechos reservados.</p>
+    </footer>
+    
+</body>
+</html>
